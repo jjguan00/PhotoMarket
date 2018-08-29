@@ -1,0 +1,28 @@
+form{
+	width:400px;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+form h2{
+	font-style: oblique;
+	color: lightblue;
+	margin-right: 100px;
+	margin-bottom: 50px;
+}
+form small{
+	width:150px;
+	margin-left: 120px;
+}
+form button{
+	margin-right: 100px;
+}
+mat-card-title{
+	margin:auto;
+	text-align: center;
+}
+mat-card{
+	margin:auto;
+	width:500px;
+}

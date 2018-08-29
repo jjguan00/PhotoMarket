@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>Photo Market</h1>
+	<ul>
+		<li><a [routerLink]="['browse']">Browse</a></li>
+		<li id="borderLi"><a [routerLink]="['listing']">My Listing</a> </li>
+		<li><button (click)="logOut()">Sign Out</button></li>
+	</ul>
+</div>
+<div class="container">
+	<router-outlet></router-outlet>
+</div>

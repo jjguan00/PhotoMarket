@@ -1,0 +1,37 @@
+#createPost{
+	border-style: solid; 
+	border-width: 2px;
+	width: 600px;
+}
+#title{
+	margin-left: 150px;
+}
+#desc{
+	margin-left: 135px;
+}
+#post_button{
+	position: absolute;
+	margin-left: 500px;
+	margin-top: -55px;
+	width: 80px;
+}
+#form_pic{
+	position:absolute;
+	margin-top: 60px;
+	width: 125px;
+	height: 125px;
+}
+#upload_button{
+	position:absolute;
+}
+#myPostList{
+	list-style:none;
+	margin-right:40px;
+	margin-top: 20px;
+}
+#delete_button{
+	position:absolute;
+	margin-left: 500px;
+	margin-top: -100px;
+	width: 80px;
+}

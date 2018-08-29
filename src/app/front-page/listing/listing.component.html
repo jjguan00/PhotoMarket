@@ -1,0 +1,47 @@
+<div class="container" id="createPost">
+	<span>
+		<input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+		<button (click)="fileInput.click()" class="btn btn-primary" id="upload_button">Select Picture</button>
+		  <img [src]="url" id="form_pic">
+	</span>
+	<form (submit)="createPostx()" enctype="multipart/form-data">
+		<div class="form-row">
+			<div class="form-group col-sm-6" id="title">
+				<input type="text" name= createPost.title [(ngModel)]= createPost.title placeholder="title" class="form-control">
+			</div>
+			<div class="form-group col-sm-2" id="price">
+				<input  type="number" name= createPost.price [(ngModel)] = createPost.price placeholder="price" class="form-control">
+			</div>
+		</div>
+		<div class="form-group col-md-8" id="desc">
+			<textarea name= createPost.desc [(ngModel)] = createPost.desc placeholder="description" class="form-control" rows="5" cols="10"></textarea>
+		</div>
+		<input type="submit" class="btn btn-success" value="Post" id="post_button">
+	</form>
+</div>
+
+<ul *ngFor="let post of user._post" id="myPostList">
+  <li>
+	<div class="container" id="createPost">
+		<span>
+			  <p id="upload_button">Uploaded Picture</p>
+			  <img src="images/{{post._image}}" id="form_pic">
+		</span>
+		<form (submit)="updatePostx(post._id)" enctype="multipart/form-data">
+			<div class="form-row">
+				<div class="form-group col-sm-6" id="title">
+					<input type="text" name= createPost.title [(ngModel)]= updatePost.title placeholder="{{post.title}}" class="form-control">
+				</div>
+				<div class="form-group col-sm-2" id="price">
+					<input  type="number" name= createPost.price [(ngModel)] = updatePost.price placeholder="{{post.price}}" class="form-control">
+				</div>
+			</div>
+			<div class="form-group col-md-8" id="desc">
+				<textarea name= createPost.desc [(ngModel)] = updatePost.desc placeholder="{{post.desc}}" class="form-control" rows="5" cols="10"></textarea>
+			</div>
+			<input type="submit" class="btn btn-success" value="Update" id="post_button">
+		</form>
+		<button (click)="deletePost(post._id)" class="btn btn-danger" id="delete_button">Delete</button>
+	</div>
+  </li>
+</ul>

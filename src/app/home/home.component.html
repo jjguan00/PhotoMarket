@@ -1,0 +1,16 @@
+<div class=" container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button [routerLink]="['/']" class="btn btn-secondary btn-lg">Home</button>
+      </li>
+      <li class="nav-item active">
+        <button [routerLink]="['/login']" class="btn btn-secondary btn-lg" id="logInButton">Log In</button>
+      </li>
+      <li>
+        <button [routerLink]="['/signup']" class="btn btn-secondary btn-lg">Sign Up</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+#borderLi{
+	list-style: none;
+	border-left-style: solid;
+	border-right-style: solid;
+}
+li{
+	font-size: 25px;
+	display: inline;
+}

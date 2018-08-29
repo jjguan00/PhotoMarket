@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder = "Search By Name" style="width:300px" [(ngModel)]="searchTerm" id="searchBar">
+	</div>
+	<ul *ngFor = "let post of posts | postFilter:searchTerm">
+		<li><img src="/images/{{post._image}}" style="width:200px; height: 200px;overflow: hidden;"></li>
+		<li>{{post.title}}</li>
+		<li>{{post.desc}}</li>
+		<li>${{post.price}}</li>
+		<li *ngIf="user._id == post._user" id="delete_button" class="btn btn-danger">delete</li>
+		<li *ngIf="user._id != post._user" id="delete_button" class="btn btn-success">contact</li>
+		<li id="buy_button class="></li>
+	</ul>
+</div>
